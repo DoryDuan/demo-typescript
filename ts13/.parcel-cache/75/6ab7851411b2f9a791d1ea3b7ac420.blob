@@ -1,0 +1,21 @@
+// 类型可以是固定的字符串
+const a = "name"; // keyof 遍历 Person，拿到 Person 的 key
+
+class Teacher {
+  constructor(info) {
+    this.info = info;
+  }
+
+  getInfo(key) {
+    return this.info[key];
+  }
+
+}
+
+const teacher = new Teacher({
+  name: "dory",
+  age: 18,
+  gender: "female"
+});
+const test = teacher.getInfo("name");
+console.log(test);
